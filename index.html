@@ -1,7 +1,22 @@
 <html>
 <head>
+  <script src="angular.min.js"></script>
+  <script src="app.js"></script>
 <title>
 Application
 </title>
 </head>
+<body ng-app='customFilterApp'>
+  <main ng-controller='customFilterAppController'>
+    <section>
+      <div>
+        {{msg | replaced | uppercase}}
+      </div>
+      <div>
+        <button type="text" ng-click="callFilter();" ng-model="msgafterfilter">click me!</button>{{msgafterfilter}}
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>
